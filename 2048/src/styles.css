@@ -1,0 +1,267 @@
+body {
+    font-family: "Lucida Sans Unicode";
+    background: #43cea2;
+    background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+    background: linear-gradient(to left, #43cea2, #185a9d);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  table {
+    margin: 0 auto;
+  }
+  
+  .buttons {
+    margin: 0 auto;
+    display: flex;
+    width: 500px;
+  }
+  
+  .button {
+    background-color: #303030;
+    color: #50c8ff;
+    height: 30px;
+    width: 100px;
+    min-width: 100px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .button:hover {
+    background-color: #50c8ff;
+    color: #303030;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .b {
+    background-color: #303030;
+    font-family: "Lucida Sans Unicode";
+    color: #50c8ff;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    font-size: 16px;
+    min-width: 100px;
+  }
+  
+  .b:hover {
+    background-color: #50c8ff;
+    color: #303030;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .buttons > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #up,
+  #down,
+  #left,
+  #right {
+    margin: auto;
+  }
+  
+  #down {
+    margin-bottom: 20px;
+  }
+  
+  .clearlb {
+    background-color: #303030;
+    color: #50c8ff;
+    height: 30px;
+    width: 170px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    border: 0px;
+  }
+  
+  .clearlb:hover {
+    background-color: #50c8ff;
+    color: #303030;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .cell {
+    height: 100px;
+    width: 100px;
+    background-color: #303030;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    font-size: 40px;
+  }
+  
+  tr {
+    display: flex;
+    color: transparent;
+  }
+  
+  .color-2 {
+    background-color: #50c8ff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .color-4 {
+    background-color: green;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .color-8 {
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .color-16 {
+    background-color: orange;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .color-32 {
+    background-color: yellow;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .color-64 {
+    background-color: blue;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .color-128 {
+    background-color: purple;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .color-256 {
+    background-color: pink;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .color-512 {
+    background-color: #50c8ff;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .color-1024 {
+    background-color: green;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .color-2048 {
+    background-color: blue;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .number {
+    color: #fff;
+    font-size: 35px;
+  }
+  
+  .score {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .log-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .score-column {
+    font-weight: bold;
+  }
+  
+  .time-column {
+    color: navy;
+    font-size: 0.8em;
+    margin-right: 10px;
+  }
+  
+  .score-column,
+  .time-column {
+    text-align: center;
+    width: 50%;
+  }
+  
+  .stylechange {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
