@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Hi, Welcome to the <i>doubler</i></h2>
+    <div><p>Type in any phrase below to transform it:</p></div>
+    <form action="/text" method=get>
+        <input type=text name=field_text>
+        <input type=submit value=Submit>
+    </form>
+{% endblock %}

@@ -1,0 +1,34 @@
+
+
+{% block content %}
+<html>
+    <head>
+        <title>Templated flask page</title>
+    </head>
+<body>
+    <h2>Welcome to Form World!</h2>
+
+    <h4>GET form example using textareas</h4>
+    <form method=get action="/getform">
+        <textarea rows=10 cols=42 id="textarea" name="textarea">
+Enter your text in this text area!
+        </textarea>
+        <input type=submit value="Submit">
+    </form>
+
+    <h4>Output textarea:</h4>
+    <p>
+        <textarea  rows=10 cols=42>
+{% if data %}
+{{data}}
+{% else %}
+GET Poptarts!
+{% endif %}
+        </textarea>
+
+        <br><br>
+        <a href=""https://assets.scriptslug.com/live/pdf/scripts/everything-everywhere-all-at-once-2022.pdf">eeaao</a>
+
+    </body>
+</html>
+{% endblock %}

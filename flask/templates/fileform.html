@@ -1,0 +1,29 @@
+{% block content %}
+ <!doctype html>
+    <title>File Reader</title>
+    <h2>Upload an file and we'll print its contents...</h2>
+    <form method=post enctype=multipart/form-data action="/fileform">
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <div name="name" id="name">
+        File name should go here:
+        <br><br>
+        {{name}}
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div name="contents" id="contents">
+        File contents should go here:
+        <br><br>
+        {{contents}}
+    </div>
+    {% endblock %}

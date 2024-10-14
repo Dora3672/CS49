@@ -1,0 +1,112 @@
+
+
+{% block content %}
+<html>
+<head>
+<title>ClaremontBat!</title>
+<style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    #problem {
+        font-size: 15px;
+    }
+    #quip1 {
+        font-size: 12px;
+    }
+    #quip2 {
+        font-size: 9px;
+    }
+    #quip3 {
+        font-size: 6px;
+    }
+    </style>
+</head>
+<body>
+
+<h2>ClaremontBat</h2>
+
+<h4>Really, <i><font color="DodgerBlue">MuddBat</font></i>...</h4>
+
+<b><font color="Teal">Welcome to the Hoch's N-Plus-One Philosophy</b></font> <br>
+<p id="problem">
+    At the Hoch, every table that can seat <tt>x</tt> diners, can also seat <tt>x+1</tt> diners! <br>
+    Write a function <tt>f</tt> whose input, <tt>x</tt> is the current number of diners. <br>
+    <tt>f(x)</tt> should return the number of diners when one is added to <tt>x</tt>! <br>
+    <span id="quip1">By induction, all Hoch tables can host infinitely many diners.</span> <br>
+    <span id="quip2">But then, too, the line for Mongolian Barbecue will never end!</span> <br>
+    <span id="quip3">This is probably too small to read!</span> <br>
+</p>
+
+<b><font color="#FF5733">Examples</b></font> <br>
+<p>
+    Examples aren't yet implemented!
+</p>
+
+<br>
+<form method=post action="/cbform">
+<textarea rows=10 cols=42 
+    id="function_input_textbox" 
+    name="function_input_textbox">
+# Enter your function here, e.g.,
+
+def f(x):
+    result = x + 1
+    return result
+</textarea>
+<br>
+<br>
+<input type=submit value="Submit">
+</form>
+
+<br>
+<hr>
+<br>
+
+<h4>Results:</h4>
+<div>
+<table id="customers">
+<tr>
+    {% for col in table[0]: %}
+    <th>{{col}}</th>
+    {% endfor %}
+</tr>
+{% for row in table[1:]: %}
+<tr>
+    {% for col in row: %}
+    <td>{{col}}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<br><br>
+
+</body>
+</html>
+{% endblock %}

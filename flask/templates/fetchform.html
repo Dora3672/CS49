@@ -1,0 +1,67 @@
+{% block content %}
+<html>
+    <head>
+        <title>
+            Fetch!
+        </title>
+    </head>
+<body>
+    <h2>Welcome to Fetch World!</h2>
+
+    <script>
+        function myFunction2(data) {
+            console.log("The data obtained in myfunction2 is\n" + data);
+            data = "<b>Start of data</b> <br>\n" + data + "\n<br>\n<b>End of data</b>"
+            document.getElementById("div2").innerHTML = data;
+        }
+    
+        async function myFunction() {
+
+          var body_data = document.getElementById("textarea_formfield").value; 
+
+          var fetch_parameters = {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+            'Content-Type': 'text/plain'
+            //'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            // ONLY POST can have a body!
+            body: body_data,    // JSON.stringify(data) // body data type must match "Content-Type" header
+          }; // end of fetch_parameters
+
+          fetch('http://localhost:3000/echo?param=42', fetch_parameters)  // the url to fetch, 127.0.0.1
+            .then((response) => response.text())        // convert result to text
+            .then((data) => myFunction2(data));         // call an external function: better to be external!
+            // external is better, because this doesn't happen immediately, 
+            // and the page waits until the data is present...
+        }
+        </script>
+    
+    <h3>Try out fetch... no "reload" needed: </h3>
+    <br>
+    
+    <button onclick="myFunction()">Get External Content with fetch</button>
+    
+    <div id="div2">
+        &nbsp;
+    </div>
+
+    <hr>
+
+    <h4>Data for posting:</h4>
+
+<p>
+<textarea  rows=8 cols=42 id="textarea_formfield">
+Fetch!
+</textarea>
+</p>
+
+</body>
+</html>
+{% endblock %}
